@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="545pt"
+   height="285pt"
+   viewBox="0.00 0.00 544.88 285.44"
+   version="1.1"
+   id="svg1169"
+   sodipodi:docname="leaf_sem_edited.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata1175">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1173">
+    <rect
+       x="65.15654"
+       y="-193.64802"
+       width="99.102235"
+       height="32.121809"
+       id="rect1793" />
+    <rect
+       x="71.823936"
+       y="-89.932965"
+       width="95.395292"
+       height="32.44273"
+       id="rect1752" />
+    <rect
+       x="70.342292"
+       y="-269.58225"
+       width="115.5682"
+       height="19.261367"
+       id="rect1746" />
+    <rect
+       x="81.084209"
+       y="-263.65568"
+       width="37.162691"
+       height="22.22028"
+       id="rect1740" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview1171"
+     showgrid="false"
+     inkscape:zoom="1.433945"
+     inkscape:cx="348.7185"
+     inkscape:cy="183.44925"
+     inkscape:window-x="1592"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="graph0"
+     inkscape:document-rotation="0" />
+  <g
+     id="graph0"
+     class="graph"
+     transform="scale(1 1) rotate(0) translate(4 281.4354)">
+    <title
+       id="title1005">lav_to_graph</title>
+    <!-- log_litter_spec_vol -->
+    <polygon
+       fill="none"
+       stroke="#000000"
+       points="188.8668,-118.4354 313.052,-118.4354 313.052,-154.4354 188.8668,-154.4354 "
+       id="polygon1011"
+       transform="matrix(0.97083827,0,0,1.0960753,28.097715,14.864801)" />
+    <text
+       text-anchor="middle"
+       x="250.9594"
+       y="-132.2354"
+       font-family="Times,serif"
+       font-size="14px"
+       fill="#000000"
+       id="text1013"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif" />
+    <!-- Fireline_intensity_kWm_1 -->
+    <polygon
+       fill="none"
+       stroke="#000000"
+       points="380.3198,-118.4354 537.0626,-118.4354 537.0626,-154.4354 380.3198,-154.4354 "
+       id="polygon1018"
+       transform="matrix(0.74563746,0,0,1.0037467,96.674869,0.82388121)" />
+    <!-- log_litter_spec_vol&#45;&gt;Fireline_intensity_kWm_1 -->
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       d="m 338.95397,-136.95924 31.03193,0.52384"
+       id="path1025"
+       sodipodi:nodetypes="cc" />
+    <polygon
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       points="370.1938,-139.9355 380.1937,-136.4354 370.1937,-132.9355 "
+       id="polygon1027"
+       transform="translate(-4.8153417)" />
+    <text
+       text-anchor="middle"
+       x="355.4068"
+       y="-140.78883"
+       font-family="Times,serif"
+       font-size="14px"
+       fill="#000000"
+       id="text1029"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif">0.63*</text>
+    <!-- logSLA -->
+    <polygon
+       fill="none"
+       stroke="#000000"
+       points="121.5802,-167.4354 121.5802,-203.4354 60.9136,-203.4354 60.9136,-167.4354 "
+       id="polygon1034"
+       transform="matrix(1.5987027,0,0,1.1358569,-36.295359,27.811881)" />
+    <!-- logSLA&#45;&gt;log_litter_spec_vol -->
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-width="2.19982"
+       d="m 163.89865,-156.55532 c 11.78638,5.48182 19.31056,8.92797 31.64002,13.60713"
+       id="path1041"
+       sodipodi:nodetypes="cc" />
+    <polygon
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       points="188.864,-151.1149 178.2989,-150.3216 180.1101,-157.0832 "
+       id="polygon1043"
+       transform="translate(16.97785,11.171251)" />
+    <text
+       text-anchor="middle"
+       x="182.05099"
+       y="-155.84352"
+       font-family="Times,serif"
+       font-size="14px"
+       fill="#000000"
+       id="text1045"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif">0.51*</text>
+    <!-- S3 -->
+    <g
+       id="node4"
+       class="node"
+       transform="matrix(1.7315122,0,0,0.99138366,-46.8423,-2.2353828)">
+      <title
+         id="title1048">S3</title>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="64.2469,-277.4354 64.2469,-241.4354 118.2469,-241.4354 118.2469,-277.4354 "
+         id="polygon1050" />
+      <text
+         text-anchor="middle"
+         x="91.246902"
+         y="-255.2354"
+         font-family="Times, serif"
+         font-size="14px"
+         fill="#000000"
+         id="text1052"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Times, serif;-inkscape-font-specification:'Times, serif'" />
+    </g>
+    <!-- logSLA&#45;&gt;S3 -->
+    <path
+       fill="none"
+       stroke="#c0c0c0"
+       d="m 90.506078,-212.99228 c 0,-5.6498 0,-11.5866 0,-17.2419"
+       id="path1057" />
+    <polygon
+       fill="#c0c0c0"
+       stroke="#c0c0c0"
+       points="87.747,-213.7276 94.747,-213.7275 91.2469,-203.7276 "
+       id="polygon1059"
+       transform="translate(-1.1112327,-3.704109)" />
+    <polygon
+       fill="#c0c0c0"
+       stroke="#c0c0c0"
+       points="94.747,-231.3537 87.747,-231.3537 91.2469,-241.3537 "
+       id="polygon1061"
+       transform="translate(-0.7408218,2.9632872)"
+       inkscape:transform-center-x="6.6517521e-06"
+       inkscape:transform-center-y="0.50677215" />
+    <text
+       text-anchor="middle"
+       x="105.21237"
+       y="-218.32417"
+       font-family="Times,serif"
+       font-size="10px"
+       fill="#000000"
+       id="text1063"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#b3b3b3;fill-opacity:1;">-0.11</text>
+    <!-- C3H -->
+    <g
+       id="node5"
+       class="node"
+       transform="matrix(1.7227598,0,0,0.92005059,-46.305589,-7.1807173)">
+      <title
+         id="title1066">C3H</title>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="64.2469,-91.4354 64.2469,-55.4354 118.2469,-55.4354 118.2469,-91.4354 "
+         id="polygon1068" />
+      <text
+         text-anchor="middle"
+         x="91.246902"
+         y="-69.235397"
+         font-family="Times,serif"
+         font-size="14px"
+         fill="#000000"
+         id="text1070"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif" />
+    </g>
+    <!-- logSLA&#45;&gt;C3H -->
+    <path
+       fill="none"
+       stroke="#c0c0c0"
+       d="m 52.4354,-165.7028 c -10.0398,7.1354 -19.5895,16.2181 -25.1837,27.2674 -9.6148,18.9907 8.5093,35.9585 27.8941,47.7922"
+       id="path1075" />
+    <polygon
+       fill="#c0c0c0"
+       stroke="#c0c0c0"
+       points="50.6222,-168.6989 60.9081,-171.239 54.4513,-162.839 "
+       id="polygon1077"
+       transform="translate(-2.9632872,1.8520545)" />
+    <polygon
+       fill="#c0c0c0"
+       stroke="#c0c0c0"
+       points="64.046,-85.5786 53.6236,-87.4825 57.0857,-93.5664 "
+       id="polygon1079"
+       transform="translate(-4.0745199,-2.2224654)" />
+    <text
+       text-anchor="middle"
+       x="48.316334"
+       y="-143.88142"
+       font-family="Times,serif"
+       font-size="10px"
+       fill="#000000"
+       id="text1081"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#b3b3b3;fill-opacity:1;">-0.11</text>
+    <!-- logSLA&#45;&gt;Fireline_intensity_kWm_1 -->
+    <g
+       id="edge7"
+       class="edge"
+       transform="matrix(0.83589487,0,0,1,62.412956,0)">
+      <title
+         id="title1084">logSLA-&gt;Fireline_intensity_kWm_1</title>
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         d="m 121.5506,-184.9503 c 14.89,0.4055 33.0876,1.1495 49.3625,2.5149 85.5735,7.1789 106.9908,10.2724 191.5926,25 2.6324,0.4582 5.302,0.9388 7.9944,1.4373"
+         id="path1086" />
+      <polygon
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         points="369.844,-152.5602 371.1567,-159.436 380.323,-154.1227 "
+         id="polygon1088"
+         transform="translate(-5.7968076,-1.0476802)" />
+    </g>
+    <!-- Resid_log_litter_spec_vol -->
+    <!-- Resid_log_litter_spec_vol&#45;&gt;log_litter_spec_vol -->
+    <!-- S3&#45;&gt;log_litter_spec_vol -->
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       d="m 146.54608,-236.11885 c 20.41049,33.01977 50.43632,54.3244 63.19342,70.61029"
+       id="path1109"
+       sodipodi:nodetypes="cc" />
+    <polygon
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       points="212.3857,-162.8204 219.0498,-154.5839 208.7038,-156.8669 "
+       id="polygon1111"
+       transform="rotate(20.403719,227.15074,-165.98648)" />
+    <text
+       text-anchor="middle"
+       x="189.01434"
+       y="-203.01779"
+       font-family="Times,serif"
+       font-size="14px"
+       fill="#000000"
+       id="text1113"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif">0.81*</text>
+    <!-- S3&#45;&gt;C3H -->
+    <path
+       fill="none"
+       stroke="#c0c0c0"
+       d="m 72.7363,-232.7723 c -33.451852,32.69493 -53.438667,77.38229 -54.744873,104.29909 0.696272,25.6651 21.12191,38.964195 34.401905,47.421846"
+       id="path1118"
+       sodipodi:nodetypes="ccc" />
+    <polygon
+       fill="#c0c0c0"
+       stroke="#c0c0c0"
+       points="69.8581,-234.766 78.2583,-241.2225 75.7178,-230.9367 "
+       id="polygon1120"
+       transform="translate(-1.8520545,2.5928763)" />
+    <polygon
+       fill="#c0c0c0"
+       stroke="#c0c0c0"
+       points="64.1147,-81.3957 53.5636,-82.357 56.466,-88.727 "
+       id="polygon1122"
+       transform="translate(-4.3523281,3.7967117)" />
+    <text
+       text-anchor="middle"
+       x="25.72127"
+       y="-82.432121"
+       font-family="Times,serif"
+       font-size="10px"
+       fill="#000000"
+       id="text1124"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#b3b3b3;fill-opacity:1;">-0.06</text>
+    <!-- S3&#45;&gt;Fireline_intensity_kWm_1 -->
+    <path
+       fill="none"
+       stroke="#b3b3b3"
+       stroke-width="1.77748"
+       d="m 165.77772,-246.77371 c 35.83995,8.39616 94.87176,18.09023 153.2235,40.5336 29.20899,11.23438 67.11215,29.51669 91.19444,42.0848"
+       id="path1129"
+       sodipodi:nodetypes="csc" />
+    <polygon
+       fill="#b3b3b3"
+       stroke="#b3b3b3"
+       stroke-width="2"
+       points="412.0132,-155.7358 415.0451,-162.0452 422.5426,-154.5593 "
+       id="polygon1131"
+       transform="rotate(11.880474,439.70479,-181.12478)"
+       inkscape:transform-center-x="-1.1973932"
+       inkscape:transform-center-y="0.98878797" />
+    <text
+       text-anchor="middle"
+       x="282.82376"
+       y="-224.15305"
+       font-family="Times,serif"
+       font-size="14px"
+       fill="#b3b3b3"
+       id="text1133"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif">0.18</text>
+    <!-- C3H&#45;&gt;log_litter_spec_vol -->
+    <path
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       d="m 154.1703,-97.345608 c 21.1634,-8.348102 15.4453,-6.479152 41.6288,-16.807552"
+       id="path1138"
+       sodipodi:nodetypes="cc" />
+    <polygon
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       points="197.2259,-111.4772 194.6572,-117.989 205.244,-118.4026 "
+       id="polygon1140" />
+    <text
+       text-anchor="middle"
+       x="169.97954"
+       y="-110.9691"
+       font-family="Times,serif"
+       font-size="14px"
+       fill="#000000"
+       id="text1142"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif">0.32*</text>
+    <!-- C3H&#45;&gt;Fireline_intensity_kWm_1 -->
+    <path
+       fill="none"
+       stroke="#b3b3b3"
+       stroke-width="2"
+       d="m 165.13267,-72.883267 c 42.07,-1.2666 77.6806,-0.746364 146.947,-14.010764 28.5214,-5.4619 54.41736,-13.941489 80.38726,-22.261689"
+       id="path1147"
+       sodipodi:nodetypes="ccc" />
+    <polygon
+       fill="#b3b3b3"
+       stroke="#b3b3b3"
+       stroke-width="2"
+       points="397.498,-118.6566 408.0902,-118.4221 399.6636,-112 "
+       id="polygon1149"
+       transform="translate(-6.4821908,5.3709581)" />
+    <text
+       text-anchor="middle"
+       x="257.25638"
+       y="-83.559784"
+       font-family="Times,serif"
+       font-size="14px"
+       fill="#b3b3b3"
+       id="text1151"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif">0.01</text>
+    <!-- Resid_Fireline_intensity_kWm_1 -->
+    <!-- Resid_Fireline_intensity_kWm_1&#45;&gt;Fireline_intensity_kWm_1 -->
+    <text
+       xml:space="preserve"
+       id="text1744"
+       style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1746);"
+       transform="translate(0.3704109,1.1112327)"><tspan
+         x="70.341797"
+         y="-258.94848"><tspan
+           style="shape-inside:url(#rect1746)">Leaf size (cm)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text1750"
+       style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1752);"
+       transform="translate(-2.031808)"><tspan
+         x="71.824219"
+         y="-79.300038"><tspan
+           style="shape-inside:url(#rect1752)">Leaf curl 
+</tspan></tspan><tspan
+         x="71.824219"
+         y="-64.276913"><tspan
+           style="shape-inside:url(#rect1752)">(unitless)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:144.232;stroke-width:0.751158"
+       x="188.50336"
+       y="-134.75269"
+       id="text1774"
+       transform="translate(34.077803,-4.0745199)"><tspan
+         x="188.50336"
+         y="-134.75269"><tspan
+           style="font-size:12.0185px;stroke-width:0.751158">Litter specific 
+</tspan></tspan><tspan
+         x="188.50336"
+         y="-119.72956"><tspan
+           style="font-size:12.0185px;stroke-width:0.751158">volume (m</tspan><tspan
+           style="font-size:65%;baseline-shift:super">3</tspan><tspan
+           style="font-size:12.0185px;stroke-width:0.751158"> kg</tspan><tspan
+           style="font-size:65%;baseline-shift:super">-1</tspan><tspan
+           style="font-size:12.0185px;stroke-width:0.751158">)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       x="394.08139"
+       y="-141.04967"
+       id="text1778"
+       style="font-size:12.0185px;white-space:pre;inline-size:156.274"
+       transform="translate(-1.1112327,1.4816436)"><tspan
+         x="394.08139"
+         y="-141.04967"><tspan
+           style="font-size:12.0185px;baseline-shift:baseline;stroke-width:0.751158">Fireline intensity
+</tspan></tspan><tspan
+         x="394.08139"
+         y="-126.02654"><tspan
+           style="font-size:12.0185px;baseline-shift:baseline;stroke-width:0.751158"> (kW m </tspan><tspan
+           style="font-size:65%;baseline-shift:super">-1</tspan><tspan
+           style="font-size:12.0185px;baseline-shift:baseline;stroke-width:0.751158">)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text1791"
+       style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1793);"
+       transform="matrix(0.89875217,0,0,1,7.9873218,-3.3600224)"><tspan
+         x="65.15625"
+         y="-183.01488"><tspan
+           style="shape-inside:url(#rect1793)">Specific leaf
+</tspan></tspan><tspan
+         x="65.15625"
+         y="-167.99175"><tspan
+           style="shape-inside:url(#rect1793)">area (cm</tspan><tspan
+           style="font-size:65%;baseline-shift:super">2</tspan><tspan
+           style="shape-inside:url(#rect1793)"> g</tspan><tspan
+           style="font-size:65%;baseline-shift:super">-1</tspan><tspan
+           style="shape-inside:url(#rect1793)">)</tspan></tspan></text>
+    <text
+       text-anchor="middle"
+       x="279.44351"
+       y="-179.63077"
+       font-family="Times,serif"
+       font-size="14px"
+       fill="#000000"
+       id="text1113-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0154px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:1">0.22*</text>
+  </g>
+</svg>
