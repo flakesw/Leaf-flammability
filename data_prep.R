@@ -14,14 +14,10 @@ library("units")
 burn_sum <- read.csv("./raw data/BurnSummary19July2019_NEW.csv")
 burn_sum$IndCode <- paste0(burn_sum$Species, burn_sum$sample)
 
-#remove leaves which didn't burn at all
-#burn_sum <- burn_sum[burn_sum$Fireline.intensity.kWm.1 > 0 & burn_sum$PercentCombustion > 0.5, ]
-
 burn_sum$success <- ifelse(burn_sum$Fireline.intensity.kWm.1 > 0, TRUE, FALSE)
 
 #remove small leaves
 burn_sum <- subset(burn_sum, !(Species %in% c("ANFA", "STRO", "JACA")))
-
 
 burn_sum$litter_spec_vol <- (burn_sum$Average.Litter.Depth/100) #m3 kg-1
 burn_sum$litter_spec_vol <- burn_sum$litter_spec_vol * 1000 #convert to cm3 g-1
@@ -51,23 +47,6 @@ leaf_data$hull_specific_vol <- leaf_data$dryHull / leaf_data$DryWeight #units ar
 leaf_data$prismatic_volume <- leaf_data$Areacm2 * leaf_data$FreshH #cm3
 leaf_data$rectangular_volume <- leaf_data$FreshH * leaf_data$FreshL * leaf_data$FreshW #cm3
 
-#calculate leaf sizes and curls
-leaf_data$S1 <- leaf_data$Areacm2^0.5
-leaf_data$C1 <- leaf_data$DryH / (leaf_data$S1)
-leaf_data$C1H <- ((leaf_data$dryHull)^(1/3))/(leaf_data$S1)
-leaf_data$C1Hfresh <- ((leaf_data$freshHull)^(1/3))/(leaf_data$S1)
-leaf_data$C1H_new <- (leaf_data$dryHull)/(leaf_data$Areacm2^(3/2))
-
-leaf_data$S2 <- (leaf_data$DryL * leaf_data$DryW)^0.5
-leaf_data$C2 <- leaf_data$DryH / leaf_data$S2
-leaf_data$C2H <- ((leaf_data$dryHull)^(1/3))/leaf_data$S2
-leaf_data$C2Hfresh <- ((leaf_data$freshHull)^(1/3))/(leaf_data$FreshL * leaf_data$FreshW)^0.5
-leaf_data$C2H_new <- (leaf_data$dryHull)/(leaf_data$Areacm2^(3/2))
-
-leaf_data$S3 <- leaf_data$DryL
-leaf_data$C3 <- leaf_data$DryH / leaf_data$S3
-leaf_data$C3H <- ((leaf_data$dryHull)^(1/3))/leaf_data$S3
-leaf_data$C3Hfresh <- ((leaf_data$freshHull)^(1/3))/leaf_data$FreshL
 
 # process leaf nutrient data ---------------------------------------------------
 
@@ -83,9 +62,7 @@ unique(burn_sum$Species)[!(unique(burn_sum$Species) %in% nutrients$Code)]
 
 nutrients_agg <- nutrients %>%
   group_by(Code) %>%
-  dplyr::summarise(Carbon = mean(Carbon, na.rm = TRUE),
-                   Nitrogen = mean(Nitrogen, na.rm = TRUE),
-                   Al.Conc. = mean(Al.Conc., na.rm = TRUE),
+  dplyr::summarise( Al.Conc. = mean(Al.Conc., na.rm = TRUE),
                    All_ash = sum(P.Conc., K.Conc., Ca.Conc., Mg.Conc., Fe.Conc., Al.Conc.))
 
 # Aggregate and join data ---------------------------------------------------------------
@@ -124,6 +101,27 @@ burn_sp <- burn_level %>%
 accum_sp <- burn_sp[which(burn_sp$accumulator), "Species"]
 burn_level$accumulator <- ifelse(burn_level$Al.Conc. > 1000, TRUE, FALSE)
 
+#---------------------------------------------------------------
+# Remove some unnecessary columns
+#---------------------------------------------------------------
+leaf_data <- select(leaf_data, !c("Ind", "Comments", "freshL3D", "freshW3D", "freshH3D",
+                                  "dryL3D", "dryW3D", "dryH3D", "volume_ratio"))
+leaf_sp_level <- select(leaf_sp_level, !c("freshL3D", "freshW3D", "freshH3D",
+                                          "dryL3D", "dryW3D", "dryH3D", "volume_ratio"))
+burn_level <- select(burn_level, !c("shade", "LitterDepth1", "LitterDepth2", "LitterDepth3",
+                                    "FlameHeight1", "FlameHeight2", "FlameHeight3",
+                                    "ROS1mmin.1", "ROS2mmin.1", "count15", "count30", "Count45",
+                                    "Mean.ROS.mmin.1",
+                                    "Comments",
+                                    "freshL3D", "freshW3D", "freshH3D",
+                                    "dryL3D", "dryW3D", "dryH3D", "volume_ratio"))
+burn_sp <- select(burn_sp, !c("LitterDepth1", "LitterDepth2", "LitterDepth3",
+                              "FlameHeight1", "FlameHeight2", "FlameHeight3",
+                              "ROS1mmin.1", "ROS2mmin.1", "count15", "count30", "Count45",
+                              "Mean.ROS.mmin.1", "sample",
+                              "freshL3D", "freshW3D", "freshH3D",
+                              "dryL3D", "dryW3D", "dryH3D", "volume_ratio"))
+names(burn_sp)
 
 
 write.csv(leaf_data, "./clean data/leaf_level_data.csv")

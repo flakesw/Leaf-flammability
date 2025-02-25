@@ -137,39 +137,6 @@ ggplot(data = burn_sp, aes(x = hull_specific_vol, y = litter_spec_vol)) +
 #*******************************************************************************
 # Hypothesis 1
 #********************************************************************************
-
-# Exploration of leaf size measurements
-
-# Estimating volume/
-
-# For each version, how well does SLA*S*C predict bulk specific volume (i.e. 1/bulk density)? 
-
-plot(leaf_data$S1 ~ leaf_data$C1)
-plot(leaf_data$S1 ~ leaf_data$C1H)
-plot(leaf_data$C1 ~ leaf_data$C1H) #two measures of leaf curl maybe exponential/sigmoid relationship?
-plot(leaf_data$S1 ~ leaf_data$C1H_new)
-plot(leaf_data$C1H ~ leaf_data$C1H_new)
-plot(leaf_data$C1 ~ leaf_data$C1H_new)
-
-plot(leaf_data$dryHull ~ log(leaf_data$C1H))
-plot(log(leaf_data$dryHull) ~ log(leaf_data$C1H_new))
-
-
-plot(leaf_data$S2 ~ leaf_data$C2)
-plot(leaf_data$S2 ~ leaf_data$C2H)
-plot(leaf_data$C2 ~ I(leaf_data$C2H/10)) #two measures maybe sigmoid relationship?
-
-plot(leaf_data$S3 ~ leaf_data$C3)
-plot(leaf_data$S3 ~ leaf_data$C3H)
-plot(log(leaf_data$C3) ~ log(leaf_data$C3H/10)) #two measures mostly linearly related
-summary(lm(log(leaf_data$C3) ~ log(leaf_data$C3H/10))) #two measures mostly linearly related
-
-
-
-plot(leaf_data$S1 ~ leaf_data$S2) #leaf area is pretty well correlated with L*W
-plot(leaf_data$dryHull ~ I(leaf_data$DryL * leaf_data$DryW * leaf_data$DryH)) #convex hull is pretty well correlated with L*W*H
-plot(leaf_data$dryHull ~ leaf_data$particle_volume)
-
 #-------------------
 ## original models
 ## These have balanced units
@@ -337,37 +304,7 @@ ggsave(effect_combined,
 # correlations
 burn_level$change_in_hull <- burn_level$dryHull/burn_level$freshHull
 burn_level$aspect_ratio <- burn_level$FreshL/burn_level$FreshW
-
-leaf_sp_level$change_in_hull <- leaf_sp_level$dryHull / leaf_sp_level$freshHull
-m <- mean(leaf_sp_level$change_in_hull)
-hist((leaf_sp_level$change_in_hull - m)/m)
-range((leaf_sp_level$change_in_hull - m)/m)
-
-plot(burn_level$change_in_hull ~ burn_level$SLAcm2g.1)
-    summary(lm(burn_level$change_in_hull ~ burn_level$SLAcm2g.1))
-plot(burn_level$change_in_hull ~ burn_level$FreshTH) #strong relationship
-     summary(lm(burn_level$change_in_hull ~ burn_level$FreshTH)) #significant
-plot(burn_level$change_in_hull ~ burn_level$FreshL)
-     summary(lm(burn_level$change_in_hull ~ burn_level$FreshL)) #significant
-plot(burn_level$change_in_hull ~ burn_level$FreshW)
-     summary(lm(burn_level$change_in_hull ~ burn_level$FreshW)) #significant
-plot(burn_level$change_in_hull ~ burn_level$aspect_ratio)
-     summary(lm(burn_level$change_in_hull ~ burn_level$aspect_ratio)) #not significant
-plot(burn_level$change_in_hull ~ burn_level$C1Hfresh) # not very strong correlation
-    summary(lm(burn_level$change_in_hull ~ burn_level$C1Hfresh))
-plot(burn_level$change_in_hull ~ burn_level$C2Hfresh) #not very strong correlation
-    summary(lm(burn_level$change_in_hull ~ burn_level$C2Hfresh))
-plot(burn_level$change_in_hull ~ burn_level$C3Hfresh) #stronger
-  summary(lm(burn_level$change_in_hull ~ burn_level$C3Hfresh))
-
-change_model <- lm(change_in_hull ~ FreshTH + FreshL + FreshW + C1Hfresh*SLAcm2g.1, data = burn_level)
-
-summary(change_model)
-
-lm.without<-update(change_model, ~. - FreshTH)
-
-rsq::rsq.partial(change_model)
-
+burn_level$curl <- ((burn_level$freshHull)^(1/3))/burn_level$FreshL
 
 plot(burn_level$change_in_hull ~ burn_level$SLAcm2g.1)
   m1 <- summary(lm(burn_level$change_in_hull ~ burn_level$SLAcm2g.1))
@@ -379,8 +316,8 @@ plot(burn_level$change_in_hull ~ burn_level$FreshW)
   m4 <- summary(lm(burn_level$change_in_hull ~ burn_level$FreshW)) #significant
 plot(burn_level$change_in_hull ~ burn_level$aspect_ratio)
   m5 <- summary(lm(burn_level$change_in_hull ~ burn_level$aspect_ratio)) #not significant
-plot(burn_level$change_in_hull ~ burn_level$C3Hfresh) #stronger
-  m6 <- summary(lm(burn_level$change_in_hull ~ burn_level$C3Hfresh))
+plot(burn_level$change_in_hull ~ burn_level$curl) #stronger
+  m6 <- summary(lm(burn_level$change_in_hull ~ burn_level$curl))
 
 #------------------------------------------
 ## Figure 6: change in traits effects plots
@@ -441,7 +378,7 @@ p5 <- ggplot(data = burn_level, aes(x = aspect_ratio, y = change_in_hull)) +
   annotate("text", x = Inf, y = Inf, label = paste("p = 0.002"), vjust = 2, hjust = 2)+ 
   geom_hline(yintercept = 1, linetype = 2)+   
   theme(plot.margin = unit(c(0,0.5,0,-0.5), "cm"))
-p6 <- ggplot(data = burn_level, aes(x = C3Hfresh, y = change_in_hull)) +
+p6 <- ggplot(data = burn_level, aes(x = curl, y = change_in_hull)) +
   geom_point(color = "steelblue") + 
   geom_smooth(method='lm', color = "black", formula= (y ~ x)) + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
@@ -505,15 +442,10 @@ sem_data$other_ash <- sem_data$All_ash - sem_data$Al.Conc.
 sem_data$log_ash <- log(sem_data$All_ash)
 sem_data$log_other_ash <- log(sem_data$other_ash)
 sem_data$log_al <- log(sem_data$Al.Conc.)
-sem_data$S3 <- log(sem_data$S3)
-sem_data$C3H <- log(sem_data$C3H)
+sem_data$S3 <- log(sem_data$DryL)
+sem_data$C3H <- log(((sem_data$freshHull)^(1/3))/sem_data$FreshL)
 sem_data$logSLA <- log(sem_data$SLAcm2g.1)
 
-plot(sem_data$SLAcm2g.1 ~ sem_data$S3)
-plot(sem_data$SLAcm2g.1 ~ sem_data$C3H)
-plot(sem_data$S3 ~ sem_data$C3H)
-plot(burn_level$S3 ~ burn_level$C3H)
-plot(sem_data$logL ~ sem_data$S3)
 
 sem_data <- sem_data %>%
   mutate(across(where(is.numeric), scale))
@@ -613,7 +545,7 @@ zero_mod <-  ggplot(data = preds_binom, aes(x = litter_spec_vol,
   scale_shape_discrete(labels = c("Non-accumulator", "Al accumulator")) +
   ylab(expression("Proportion of ignitions succcessful")) +
   xlab("")
-plot(zero_mod)
+# plot(zero_mod)
 
 intensity_mod <- ggplot(data = preds_int, aes(x = litter_spec_vol, 
                                               y = preds, 
@@ -632,7 +564,7 @@ intensity_mod <- ggplot(data = preds_int, aes(x = litter_spec_vol,
         legend.position = "none") + 
   ylab(expression("Fireline intensity (kW m"^-1*")")) +
   xlab("")
-plot(intensity_mod)
+# plot(intensity_mod)
 
 al_plots <- cowplot::plot_grid(zero_mod + 
                                  theme(legend.position = c(0.7, 0.2))+
@@ -687,6 +619,9 @@ summary(lm(sem_data$Fireline.intensity.kWm.1 ~ sem_data$log_al))
 # Figure 5 differences in functional type
 library("multcompView")
 
+burn_sp$C3H <- ((burn_sp$dryHull)^(1/3))/burn_sp$DryL
+burn_sp$S3 <- burn_sp$DryL
+
 #significant -- pseudoreplicated
 boxplot(burn_level$Fireline.intensity.kWm.1 ~ burn_level$FG)
 summary(aov(burn_level$Fireline.intensity.kWm.1 ~ burn_level$FG))
@@ -713,8 +648,8 @@ model <- aov(dryHull ~ FG, data = burn_sp)
 summary(model)
 hull_tukey <- TukeyHSD(model, conf.level=0.95)
 
-boxplot(burn_sp$S3 ~ burn_sp$FG)
-model <- aov(S3 ~ FG, data = burn_sp)
+boxplot(burn_sp$DryL ~ burn_sp$FG)
+model <- aov(DryL ~ FG, data = burn_sp)
 summary(model)
 s3_tukey <- TukeyHSD(model, "FG", conf.level=0.95)
 
@@ -765,7 +700,7 @@ fire_int_fg <- ggplot(data = burn_sp[!is.na(burn_sp$FG), ],
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   ylab(expression("Fireline intensity (kW m"^-1*")")) +
   xlab(expression("Functional group")) + 
-  geom_text(data = final, aes(label = Letters),vjust=-5,hjust=-.5)
+  geom_text(data = final, aes(label = Letters),vjust=-5,hjust=-.5, size = 7/.pt)
 plot(fire_int_fg)
 
 ## panel for specivif volume
@@ -781,7 +716,7 @@ spec_vol_fg <- ggplot(data = burn_sp[!is.na(burn_sp$FG), ], aes(x = FG, y = litt
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   ylab(expression("Litter specific volume (cm"^3*" g"^-1*")")) +
   xlab(expression("Functional group")) + 
-  geom_text(data = final, aes(label = Letters),vjust=-5,hjust=-.5)
+  geom_text(data = final, aes(label = Letters),vjust=-5,hjust=-.5, size = 7/.pt)
 plot(spec_vol_fg)
 
 #panel for SLA
@@ -797,7 +732,7 @@ sla_fg <- ggplot(data = burn_sp[!is.na(burn_sp$FG), ], aes(x = FG, y = SLAcm2g.1
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   ylab(expression("Specific leaf area (cm"^2*" g"^-1*")")) +
   xlab(expression("Functional group"))+ 
-  geom_text(data = final, aes(label = Letters),vjust=-5,hjust=-.5)
+  geom_text(data = final, aes(label = Letters),vjust=-5,hjust=-.5, size = 7/.pt)
 plot(sla_fg)
 
 
@@ -815,7 +750,7 @@ s3_fg <- ggplot(data = burn_sp[!is.na(burn_sp$FG), ], aes(x = FG, y = S3)) +
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   ylab(expression("Leaf size (cm)")) +
   xlab(expression("Functional group"))+ 
-  geom_text(data = final, aes(label = Letters),vjust=-4.5,hjust=-.5)
+  geom_text(data = final, aes(label = Letters),vjust=-4.5,hjust=-.5, size = 7/.pt)
 plot(s3_fg)
 
 
@@ -832,7 +767,7 @@ C3H_fg <- ggplot(data = burn_sp[!is.na(burn_sp$FG), ], aes(x = FG, y = C3H)) +
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   ylab(expression("Leaf curl (unitless)")) +
   xlab(expression("Functional group"))+ 
-  geom_text(data = final, aes(label = Letters),vjust=-4.5,hjust=-.5)
+  geom_text(data = final, aes(label = Letters),vjust=-4.5,hjust=-.5, size = 7/.pt)
 plot(C3H_fg)
 
 # gridExtra::grid.arrange(fire_int_fg, spec_vol_fg, sla_fg, s3_fg, C3H_fg, nrow = 2)
@@ -852,8 +787,8 @@ fg_plots <- cowplot::plot_grid(fire_int_fg +
                                C3H_fg+
                                  theme(axis.text=element_text(size=7),
                                        axis.title=element_text(size=8)),
-                               align='v', vjust=1, hjust = -0.5, scale = 1, 
-                               labels = "auto", 
+                               align='v', vjust=1.4, hjust = -6.5, scale = 1, 
+                               labels = "auto", label_size = 10,
                                nrow = 2, ncol = 3, axis = "l")
 plot(fg_plots)
 ggsave(plot = fg_plots, 
