@@ -10,6 +10,8 @@ Column headings are defined below. Most of them are shared between the data tabl
 Burn-related variables:
     Species -- species code
     sample -- unique replicate code
+    Date -- date of burn trial
+    time -- time of ignition
     LitterDepth_n -- litter depth measurements at 15, 30, and 45 cm along arena (cm)
     Average.Litter.Depth -- mean of litter depth measurements (cm)
     FlameHeight_n -- flame height estimated at 15, 30, and 45 cm along arena (cm)
