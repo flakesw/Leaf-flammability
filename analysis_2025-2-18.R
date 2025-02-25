@@ -108,7 +108,7 @@ g <- ggplot(data = burn_sp, aes(y = litter_spec_vol, x = packing_ratio)) +
   geom_point(color = "steelblue") + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
-  ylab(expression("Litter specific volume (V"["s, litter"]*") (m"^3*" kg"^-1*")")) +
+  ylab(expression("Litter specific volume (V"["s, litter"]*") (cm"^3*" g"^-1*")")) +
   xlab(expression("Packing ratio (unitless)")) +
   geom_line(data = pred.df, aes(y = litter_spec_vol, x = packing_ratio)) + 
   geom_line(data = pred.df, aes(y = hi, x = packing_ratio), color = "grey", alpha = 0.4) + 
@@ -129,8 +129,8 @@ ggplot(data = burn_sp, aes(x = hull_specific_vol, y = litter_spec_vol)) +
   geom_abline(slope = 1, intercept = 0, linetype = 2) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
-  ylab(expression("Litter specific volume (V"["s, litter"]*") (m"^3*" kg"^-1*")")) +
-  xlab(expression("Convex hull specific volume (V"["s, leaf"]*") (m"^3*" kg"^-1*")"))
+  ylab(expression("Litter specific volume (V"["s, litter"]*") (cm"^3*" g"^-1*")")) +
+  xlab(expression("Convex hull specific volume (V"["s, leaf"]*") (cm"^3*" g"^-1*")"))
 
 
 
@@ -183,8 +183,8 @@ car::vif(mod1)
 AIC(mod1)
 plot(residuals(mod1) ~ fitted(mod1))
 
-mod2 <- lm(log(litter_spec_vol) ~ log(Areacm2^0.5) + log(((dryHull/1000)^(1/3))/(Areacm2^0.5)) + log(SLAcm2g.1), data = burn_sp)
-mod2 <- glm(litter_spec_vol ~ log(Areacm2^0.5) + log(((dryHull/1000)^(1/3))/(Areacm2^0.5)) + log(SLAcm2g.1), 
+mod2 <- lm(log(litter_spec_vol) ~ log(Areacm2^0.5) + log(((dryHull)^(1/3))/(Areacm2^0.5)) + log(SLAcm2g.1), data = burn_sp)
+mod2 <- glm(litter_spec_vol ~ log(Areacm2^0.5) + log(((dryHull)^(1/3))/(Areacm2^0.5)) + log(SLAcm2g.1), 
            data = burn_sp,
            family = gaussian(link = "log"))
 
@@ -202,7 +202,7 @@ AIC(mod3)
 plot(residuals(mod3) ~ fitted(mod3))
  
 
-mod4 <- lm(log(litter_spec_vol) ~ log((DryL * DryW)^0.5) + I(log(((dryHull/1000)^(1/3)) / ((DryL * DryW)^0.5))) + log(SLAcm2g.1), data = burn_sp)
+mod4 <- lm(log(litter_spec_vol) ~ log((DryL * DryW)^0.5) + I(log(((dryHull)^(1/3)) / ((DryL * DryW)^0.5))) + log(SLAcm2g.1), data = burn_sp)
 summary(mod4)
 car::vif(mod4)
 AIC(mod4)
@@ -215,7 +215,7 @@ car::vif(mod5)
 AIC(mod5)
 plot(residuals(mod5) ~ fitted(mod5))
  
-mod6 <- lm(log(litter_spec_vol) ~ log(DryL) + log(((dryHull/1000)^(1/3))/DryL) + log(SLAcm2g.1), data = burn_sp)
+mod6 <- lm(log(litter_spec_vol) ~ log(DryL) + log(((dryHull)^(1/3))/DryL) + log(SLAcm2g.1), data = burn_sp)
 summary(mod6)
 car::vif(mod6)
 AIC(mod6)
@@ -227,7 +227,7 @@ plot(residuals(mod6) ~ fitted(mod6))
 #---------------------------------------------------------
 
 temp <- burn_sp %>%
-  mutate(C = ((dryHull/1000)^(1/3))/DryL)
+  mutate(C = ((dryHull)^(1/3))/DryL)
 mod6 <- lm(log(litter_spec_vol) ~ log(DryL) + log(C) + log(SLAcm2g.1), data = temp)
 mod6 <- glm(litter_spec_vol ~ scale(log(DryL)) + scale(log(C)) + scale(log(SLAcm2g.1)), data = temp,
             family = gaussian(link = "log"))
@@ -256,7 +256,7 @@ S_eff <- ggplot() +
   theme(axis.text=element_text(size=7),
         axis.title=element_text(size=9)) +
   xlab(label = "Leaf size (Dry leaf length, cm)") +
-  ylab(label = expression("Litter specific volume (m"^3*" kg"^-1*")"))
+  ylab(label = expression("Litter specific volume (cm"^3*" g"^-1*")"))
 plot(S_eff)
 
 eff <- Effect(focal.predictors = c("C"), 
@@ -315,15 +315,17 @@ effect_combined <- cowplot::plot_grid(S_eff,
                    SLA_eff + theme(axis.text.y = element_blank(),
                              axis.title.y = element_blank()),
                    nrow = 1, ncol = 3,
-                   rel_widths = c(1.3, 1, 1),
+                   rel_widths = c(1.2, 1, 1),
                    label_x = c(0.3,0.1,0.1),
                    labels = "auto",
+                   hjust = c(1,0,0),
+                   vjust = c(2.7),
                    align = "h")
 plot(effect_combined)
 
 ggsave(effect_combined,
-       filename = "./Outputs/Fig 5 effects_traits.png",
-       device = "png",
+       filename = "./Outputs/Fig 4 litter specific vol effects_traits.svg",
+       device = "svg",
        units = "in",
        width = 6,
        height = 2.3)
@@ -393,27 +395,30 @@ p1 <- ggplot(data = burn_level, aes(x = SLAcm2g.1, y = change_in_hull)) +
   ylab(expression("Change in volume (proportion)"))+
   # annotate("text", x = -Inf, y = Inf, label = paste("(a)"), vjust = 2, hjust = -1) +
   annotate("text", x = Inf, y = Inf, label = paste("p =", round(m1$coefficients[2,4], 2)), vjust = 2, hjust = 2) + 
-  geom_hline(yintercept = 1, linetype = 2)
+  geom_hline(yintercept = 1, linetype = 2)+   
+    theme(plot.margin = unit(c(0,0.5,0,-0.5), "cm"))
 p2 <- ggplot(data = burn_level, aes(x = FreshTH, y = change_in_hull)) +
   geom_point(color = "steelblue") + 
   geom_smooth(method='lm', color = "black", formula= (y ~ x)) + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   xlab(expression("Leaf thickness (mm)")) +
-  ylab(expression("Change in volume (proportion)"))+
+  # ylab(expression("Change in volume (proportion)"))+
   # annotate("text", x = -Inf, y = Inf, label = paste("(b)"), vjust = 2, hjust = -1) +
   annotate("text", x = Inf, y = Inf, label = paste("p <0.001"), vjust = 2, hjust = 2)+ 
-  geom_hline(yintercept = 1, linetype = 2)
+  geom_hline(yintercept = 1, linetype = 2)+   
+  theme(plot.margin = unit(c(0,0.5,0,-0.5), "cm"))
 p3 <- ggplot(data = burn_level, aes(x = FreshL, y = change_in_hull)) +
   geom_point(color = "steelblue") + 
   geom_smooth(method='lm', color = "black", formula= (y ~ x)) + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   xlab(expression("Leaf length (cm)")) +
-  ylab(expression("Change in volume (proportion)"))+
+  # ylab(expression("Change in volume (proportion)"))+
   # annotate("text", x = -Inf, y = Inf, label = paste("(c)"), vjust = 2, hjust = -1) +
   annotate("text", x = Inf, y = Inf, label = paste("p <0.001"), vjust = 2, hjust = 2)+ 
-  geom_hline(yintercept = 1, linetype = 2)
+  geom_hline(yintercept = 1, linetype = 2)+   
+  theme(plot.margin = unit(c(0,0.5,0,-0.5), "cm"))
 p4 <- ggplot(data = burn_level, aes(x = FreshW, y = change_in_hull)) +
   geom_point(color = "steelblue") + 
   geom_smooth(method='lm', color = "black", formula= (y ~ x)) + 
@@ -423,42 +428,57 @@ p4 <- ggplot(data = burn_level, aes(x = FreshW, y = change_in_hull)) +
   ylab(expression("Change in volume (proportion)"))+
   # annotate("text", x = -Inf, y = Inf, label = paste("(d)"), vjust = 2, hjust = -1) +
   annotate("text", x = Inf, y = Inf, label = paste("p <0.001"), vjust = 2, hjust = 2)+ 
-  geom_hline(yintercept = 1, linetype = 2)
+  geom_hline(yintercept = 1, linetype = 2)+   
+  theme(plot.margin = unit(c(0,0.5,0,-0.5), "cm"))
 p5 <- ggplot(data = burn_level, aes(x = aspect_ratio, y = change_in_hull)) +
   geom_point(color = "steelblue") + 
   geom_smooth(method='lm', color = "black", formula= (y ~ x)) + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   xlab(expression("Aspect ratio (unitless)")) +
-  ylab(expression("Change in volume (proportion)"))+
+  # ylab(expression("Change in volume (proportion)"))+
   # annotate("text", x = -Inf, y = Inf, label = paste("(e)"), vjust = 2, hjust = -1) +
   annotate("text", x = Inf, y = Inf, label = paste("p = 0.002"), vjust = 2, hjust = 2)+ 
-  geom_hline(yintercept = 1, linetype = 2)
+  geom_hline(yintercept = 1, linetype = 2)+   
+  theme(plot.margin = unit(c(0,0.5,0,-0.5), "cm"))
 p6 <- ggplot(data = burn_level, aes(x = C3Hfresh, y = change_in_hull)) +
   geom_point(color = "steelblue") + 
   geom_smooth(method='lm', color = "black", formula= (y ~ x)) + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   xlab(expression("Leaf curl (unitless)")) +
-  ylab(expression("Change in volume (proportion)"))+
+  # ylab(expression("Change in volume (proportion)"))+
   # annotate("text", x = -Inf, y = Inf, label = paste("(f)"), vjust = 2, hjust = -1) +
   annotate("text", x = Inf, y = Inf, label = paste("p < 0.001"), vjust = 2, hjust = 2)+ 
-  geom_hline(yintercept = 1, linetype = 2)
+  geom_hline(yintercept = 1, linetype = 2)+   
+  scale_x_continuous(breaks = c(0.2,0.3,0.4)) +
+  # theme(axis.text.x = element_text(angle=45, vjust=1, hjust=1)) +
+  theme(plot.margin = unit(c(0,0.5,0,-0.5), "cm"))
 
-cowplot::plot_grid(p1, 
+combined_change_plots <- cowplot::plot_grid(NULL, p1, 
                    p2 + theme(axis.text.y = element_blank(),
-                                  axis.title.y = element_blank() ), 
+                                  axis.title.y = element_blank() ),
                    p3+ theme(axis.text.y = element_blank(),
                              axis.title.y = element_blank() ),
-                   p4, 
+                   NULL, p4, 
                    p5+ theme(axis.text.y = element_blank(),
                              axis.title.y = element_blank() ), 
                    p6+ theme(axis.text.y = element_blank(),
                              axis.title.y = element_blank() ),
-                   nrow = 2, ncol = 3,
+                   nrow = 2, ncol = 4,
                    labels = "auto",
-                   align = "v")
+                   hjust = -5,
+                   vjust = 2,
+                   rel_widths = c(0.2,1, 1, 1),
+                   align = "hv")
 
+ggsave(plot = combined_change_plots, 
+       filename = "./outputs/Fig 5 change_in_hull_size.svg",
+       device = "svg",
+       units = "in",
+       scale = 0.9,
+       width = 6.5,
+       height = 4)
 
 #-------------------------------------------------------------------------------
 # Hypothesis 3:
@@ -550,7 +570,7 @@ binom_mod <- glm(prop_success ~ accumulator + scale(log(litter_spec_vol)),
 summary(binom_mod)
 
 newdat <- expand.grid(accumulator = c(TRUE, FALSE),
-                      litter_spec_vol = seq(0, 0.2, 0.001))
+                      litter_spec_vol = seq(0, 200, 0.1))
 preds_binom <- cbind(preds = predict(binom_mod, newdat), newdat)
 plot(boot::inv.logit(preds_binom$preds) ~ newdat$litter_spec_vol)
 plot(burn_sp$prop_success ~ burn_sp$litter_spec_vol, col = ifelse(burn_sp$accumulator, "red", "blue"))
@@ -562,14 +582,14 @@ mod2 <- glm(Fireline.intensity.kWm.1 ~ accumulator + scale(log(litter_spec_vol))
             family = gaussian(link = "log"))
 summary(mod2)
 
-newdat <- expand.grid(Al.Conc. = c(100, 5000),
-                      litter_spec_vol = seq(0, 0.2, by = 0.001))
-preds <- predict(mod, newdata = newdat)
+# newdat <- expand.grid(Al.Conc. = c(100, 5000),
+#                       litter_spec_vol = seq(0, 200, by = 0.1))
+preds <- predict(mod2, newdata = newdat)
 plot(preds ~ newdat$litter_spec_vol)
 
 #more or less equivalent using binary accumulator variable
 newdat <- expand.grid(accumulator = c(TRUE, FALSE),
-                      litter_spec_vol = seq(0, 0.2, by = 0.001))
+                      litter_spec_vol = seq(0, 200, by = 0.1))
 preds_int <- cbind(preds = predict(mod2, newdata = newdat, type = "response"), newdat)
 plot((preds_int$preds) ~ newdat$litter_spec_vol)
 
@@ -611,7 +631,6 @@ intensity_mod <- ggplot(data = preds_int, aes(x = litter_spec_vol,
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
         legend.position = "none") + 
   ylab(expression("Fireline intensity (kW m"^-1*")")) +
-  # xlab(expression("Litter specific volume ("*"kg m"^-3*")"))
   xlab("")
 plot(intensity_mod)
 
@@ -626,12 +645,13 @@ al_plots <- cowplot::plot_grid(zero_mod +
                                align='v', vjust=1, scale = 1, 
                                labels = "auto", nrow = 2, axis = "l")
 
-al_plots <- cowplot::ggdraw(cowplot::add_sub(al_plots, expression("Litter specific volume ("*"kg m"^-3*")"),
+al_plots <- cowplot::ggdraw(cowplot::add_sub(al_plots, expression("Litter specific volume ("*"cm"^-3*" g"^-1*")"),
                 size = 9.5, vpadding = grid::unit(0.5, "lines"), vjust = -0.85, hjust = 0.33))
 plot(al_plots)
+
 ggsave(plot = al_plots, 
-       filename = "./outputs/al_plots.png",
-       device = "png",
+       filename = "./outputs/Fig 7 aluminum effects plot.svg",
+       device = "svg",
        units = "in",
        scale = 1,
        width = 3.2,
@@ -658,7 +678,7 @@ summary(fit_al, fit.measures= TRUE)
 
 
 
-LittleHelpers::lav_to_graph(fit_al, file = "al_sem.svg")
+LittleHelpers::lav_to_graph(fit_al, file = "Fig sxx al_sem.svg")
 
 summary(lm(sem_data$Fireline.intensity.kWm.1 ~ sem_data$log_al))
 
@@ -725,8 +745,9 @@ generate_label_df <- function(TUKEY, variable){
 }
 
 
-#----------------
-#Make multipanel figure
+#----------------------------
+#Fig. 8 Make multipanel figure for functional types
+#----------------------------
 
 theme_update(plot.margin = unit(c(0.5, 0, 0,0.25), "cm"))
 
@@ -758,7 +779,7 @@ spec_vol_fg <- ggplot(data = burn_sp[!is.na(burn_sp$FG), ], aes(x = FG, y = litt
   geom_boxplot(color = "steelblue") + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
-  ylab(expression("Litter specific volume (m"^3*"g"^-1*")")) +
+  ylab(expression("Litter specific volume (cm"^3*" g"^-1*")")) +
   xlab(expression("Functional group")) + 
   geom_text(data = final, aes(label = Letters),vjust=-5,hjust=-.5)
 plot(spec_vol_fg)
@@ -836,43 +857,62 @@ fg_plots <- cowplot::plot_grid(fire_int_fg +
                                nrow = 2, ncol = 3, axis = "l")
 plot(fg_plots)
 ggsave(plot = fg_plots, 
-       filename = "./outputs/fg_plots.png",
-       device = "png",
+       filename = "./outputs/Fig 8 fg_plots.svg",
+       device = "svg",
        units = "in",
        scale = 1,
        width = 6,
        height = 4)
 
 #-------------------------------------------------------------------------------
-# Figure 1
+# Figure 3
 fig_intensity_specvol <- ggplot(data = burn_level[burn_level$success, ], aes(x = litter_spec_vol, y = Fireline.intensity.kWm.1)) +
   geom_point(color = "steelblue") + 
-  geom_smooth(method='lm', color = "black", formula= (y ~ x)) + 
+  geom_smooth(method='lm', color = "black", formula= (y ~ x), se = FALSE) + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   ylab(expression("Fireline intensity (kW m"^-1*")")) +
-  xlab(expression("Litter specific volume (m"^3*" kg"^-1*")"))
-ggsave(fig_intensity_specvol,
-       device = "png",
-       units = "in",
-       filename = "Outputs/Figure4-intensity vs specific volume.png",
-       height= 3,
-       width = 3)
+  xlab(expression("Litter specific volume (cm"^3*" g"^-1*")")) +
+  ylim(c(0,400))
 
 summary(lm(Fireline.intensity.kWm.1 ~ litter_spec_vol, data = burn_level[burn_level$success, ]))
 
-ggplot(data = burn_level[burn_level$success, ], aes(x = litter_bulk_density, y = Fireline.intensity.kWm.1)) +
+log.model <-lm(log(Fireline.intensity.kWm.1) ~ log(litter_bulk_density), burn_level[burn_level$success, ])
+
+log.model.df <- data.frame(x = burn_level[burn_level$success, ]$litter_bulk_density,
+                           y = exp(fitted(log.model)))
+fig_intensity_bulk_dens <- ggplot(data = burn_level[burn_level$success, ], aes(x = litter_bulk_density, y = Fireline.intensity.kWm.1)) +
   geom_point(color = "steelblue") + 
-  geom_smooth(method='lm', color = "black", formula= (y ~ x)) + 
+  # geom_smooth(method='lm', color = "black", formula= (log(y) ~ log(x))) + 
+  geom_line(data = log.model.df, aes(x, y), size = 1) + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_blank(), axis.line = element_line(colour = "black")) + 
   ylab(expression("Fireline intensity (kW m"^-1*")")) +
-  xlab(expression("Litter bulk density (kg"^-1*"m"^3*")"))
+  xlab(expression("Litter bulk density (g"*" cm"^-3*")")) +
+  ylim(c(0,400))
 
+fig_3_intensity <- cowplot::plot_grid(fig_intensity_specvol, 
+                                      fig_intensity_bulk_dens + theme(axis.text.y = element_blank(),
+                                                                      axis.title.y = element_blank()),
+                   align='h',
+                   rel_widths = c(1.13, 1),
+                   label_x = c(0.2,0.05),
+                   labels = "auto", 
+                   vjust = 2.8,
+                   nrow = 1, ncol = 2, axis = "l")
+plot(fig_3_intensity)
 
+ggsave(fig_3_intensity,
+       device = "svg",
+       units = "in",
+       filename = "Outputs/Fig 3 intensity vs volume & bulk density.svg",
+       height= 3,
+       width = 6)
 
+#------------------------
 #Figure S1
 #correlations among volumes
+#--------------------------
 
 library(GGally)
 options(scipen = 999)

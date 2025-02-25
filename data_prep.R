@@ -41,6 +41,7 @@ leaf_data$Ind <- strsplit(leaf_data$IndLeafCode, "-") %>%
   unlist() %>%
   as.factor()
 leaf_data$dryHull <- leaf_data$dryHull/1000 #convert from mm3 to cm3
+leaf_data$freshHull <- leaf_data$freshHull/1000 #convert from mm3 to cm3
 
 #calculate leaf volumes (for Hypothesis 1)
 
@@ -53,20 +54,20 @@ leaf_data$rectangular_volume <- leaf_data$FreshH * leaf_data$FreshL * leaf_data$
 #calculate leaf sizes and curls
 leaf_data$S1 <- leaf_data$Areacm2^0.5
 leaf_data$C1 <- leaf_data$DryH / (leaf_data$S1)
-leaf_data$C1H <- ((leaf_data$dryHull/1000)^(1/3))/(leaf_data$S1)
-leaf_data$C1Hfresh <- ((leaf_data$freshHull/1000)^(1/3))/(leaf_data$S1)
-leaf_data$C1H_new <- (leaf_data$dryHull/1000)/(leaf_data$Areacm2^(3/2))
+leaf_data$C1H <- ((leaf_data$dryHull)^(1/3))/(leaf_data$S1)
+leaf_data$C1Hfresh <- ((leaf_data$freshHull)^(1/3))/(leaf_data$S1)
+leaf_data$C1H_new <- (leaf_data$dryHull)/(leaf_data$Areacm2^(3/2))
 
 leaf_data$S2 <- (leaf_data$DryL * leaf_data$DryW)^0.5
 leaf_data$C2 <- leaf_data$DryH / leaf_data$S2
-leaf_data$C2H <- ((leaf_data$dryHull/1000)^(1/3))/leaf_data$S2
-leaf_data$C2Hfresh <- ((leaf_data$freshHull/1000)^(1/3))/(leaf_data$FreshL * leaf_data$FreshW)^0.5
-leaf_data$C2H_new <- (leaf_data$dryHull/1000)/(leaf_data$Areacm2^(3/2))
+leaf_data$C2H <- ((leaf_data$dryHull)^(1/3))/leaf_data$S2
+leaf_data$C2Hfresh <- ((leaf_data$freshHull)^(1/3))/(leaf_data$FreshL * leaf_data$FreshW)^0.5
+leaf_data$C2H_new <- (leaf_data$dryHull)/(leaf_data$Areacm2^(3/2))
 
 leaf_data$S3 <- leaf_data$DryL
 leaf_data$C3 <- leaf_data$DryH / leaf_data$S3
-leaf_data$C3H <- ((leaf_data$dryHull/1000)^(1/3))/leaf_data$S3
-leaf_data$C3Hfresh <- ((leaf_data$freshHull/1000)^(1/3))/leaf_data$FreshL
+leaf_data$C3H <- ((leaf_data$dryHull)^(1/3))/leaf_data$S3
+leaf_data$C3Hfresh <- ((leaf_data$freshHull)^(1/3))/leaf_data$FreshL
 
 # process leaf nutrient data ---------------------------------------------------
 

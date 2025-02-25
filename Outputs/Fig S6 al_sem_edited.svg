@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="543pt"
+   height="307pt"
+   viewBox="0.00 0.00 543.21 307.44"
+   version="1.1"
+   id="svg2148"
+   sodipodi:docname="Fig sxx al_sem_edited.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata2154">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2152">
+    <rect
+       x="70.342293"
+       y="-269.58224"
+       width="115.5682"
+       height="19.261368"
+       id="rect1746" />
+    <rect
+       x="70.342293"
+       y="-269.58224"
+       width="115.5682"
+       height="19.261368"
+       id="rect3435" />
+    <rect
+       x="71.823936"
+       y="-89.932968"
+       width="95.395294"
+       height="32.44273"
+       id="rect1752" />
+    <rect
+       x="71.823936"
+       y="-89.932968"
+       width="95.395294"
+       height="32.44273"
+       id="rect3438" />
+    <rect
+       x="65.15654"
+       y="-193.64803"
+       width="99.102234"
+       height="32.121807"
+       id="rect1793" />
+    <rect
+       x="65.15654"
+       y="-193.64803"
+       width="99.102234"
+       height="32.121807"
+       id="rect3441" />
+    <rect
+       x="70.342293"
+       y="-269.58224"
+       width="122.50957"
+       height="40.085471"
+       id="rect1746-1" />
+    <rect
+       x="70.342293"
+       y="-269.58224"
+       width="115.5682"
+       height="19.261368"
+       id="rect3757" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1">
+      <path
+         d="M 0,0 L 623.42347,0 L 623.42347,35.806887 L 0,35.806887 z"
+         id="path3780" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="958"
+     inkscape:window-height="1008"
+     id="namedview2150"
+     showgrid="false"
+     inkscape:zoom="0.54107342"
+     inkscape:cx="317.86978"
+     inkscape:cy="-81.437465"
+     inkscape:window-x="2553"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="edge4" />
+  <g
+     id="graph0"
+     class="graph"
+     transform="scale(1 1) rotate(0) translate(4 303.4354)">
+    <title
+       id="title1977">lav_to_graph</title>
+    <!-- log_litter_spec_vol -->
+    <!-- Fireline_intensity_kWm_1 -->
+    <!-- log_litter_spec_vol&#45;&gt;Fireline_intensity_kWm_1 -->
+    <!-- logSLA -->
+    <!-- logSLA&#45;&gt;log_litter_spec_vol -->
+    <!-- log_al -->
+    <!-- logSLA&#45;&gt;log_al -->
+    <!-- logSLA&#45;&gt;Fireline_intensity_kWm_1 -->
+    <!-- Resid_log_litter_spec_vol -->
+    <!-- Resid_log_litter_spec_vol&#45;&gt;log_litter_spec_vol -->
+    <!-- S3 -->
+    <!-- S3&#45;&gt;log_litter_spec_vol -->
+    <!-- S3&#45;&gt;log_al -->
+    <!-- C3H -->
+    <!-- C3H&#45;&gt;log_litter_spec_vol -->
+    <g
+       id="edge4"
+       class="edge"
+       transform="matrix(0.77788366,0,0,1.3007834,42.033373,46.369695)">
+      <title
+         id="title2095">C3H-&gt;log_litter_spec_vol</title>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="313.052,-154.4354 188.8668,-154.4354 188.8668,-118.4354 313.052,-118.4354 "
+         id="polygon1011"
+         transform="matrix(1.2479129,0,0,0.84253399,-9.937542,-31.601213)" />
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="537.0626,-154.4354 380.3198,-154.4354 380.3198,-118.4354 537.0626,-118.4354 "
+         id="polygon1018"
+         transform="matrix(0.95844034,0,0,0.77156257,78.21134,-42.394223)" />
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-width="1.98803"
+         d="m 389.63623,-148.3057 39.88835,0.40266"
+         id="path1025"
+         sodipodi:nodetypes="cc" />
+      <polygon
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         points="370.1938,-139.9355 380.1937,-136.4354 370.1937,-132.9355 "
+         id="polygon1027"
+         transform="matrix(1.2853972,0,0,0.76868254,-52.243891,-43.027523)" />
+      <text
+         text-anchor="middle"
+         x="317.66476"
+         y="-195.58653"
+         font-family="Times,serif"
+         font-size="14px"
+         fill="#000000"
+         id="text1029"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">0.69*</text>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="60.9136,-203.4354 60.9136,-167.4354 121.5802,-167.4354 121.5802,-203.4354 "
+         id="polygon1034"
+         transform="matrix(2.0549681,0,0,0.87311337,-92.708221,-21.649013)" />
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-width="2.18665"
+         d="m 164.6206,-163.36886 c 15.15019,4.21377 24.82174,6.86277 40.67,10.45956"
+         id="path1041"
+         sodipodi:nodetypes="cc" />
+      <polygon
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         points="188.864,-151.1149 178.2989,-150.3216 180.1101,-157.0832 "
+         id="polygon1043"
+         transform="matrix(1.2853972,0,0,0.76868254,-24.230986,-34.440373)" />
+      <text
+         text-anchor="middle"
+         x="145.34679"
+         y="-210.55113"
+         font-family="Times,serif"
+         font-size="14px"
+         fill="#000000"
+         id="text1045"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">0.53*</text>
+      <g
+         id="node4-1"
+         class="node"
+         transform="matrix(2.225681,0,0,0.76205934,-106.26522,-44.745823)">
+        <title
+           id="title1048">S3</title>
+        <polygon
+           fill="none"
+           stroke="#000000"
+           points="118.2469,-241.4354 118.2469,-277.4354 64.2469,-277.4354 64.2469,-241.4354 "
+           id="polygon1050" />
+        <text
+           text-anchor="middle"
+           x="91.246902"
+           y="-255.2354"
+           font-family="Times, serif"
+           font-size="14px"
+           fill="#000000"
+           id="text1052"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Times, serif;-inkscape-font-specification:'Times, serif'" />
+      </g>
+      <g
+         id="node5-0"
+         class="node"
+         transform="matrix(2.2144307,0,0,0.70722682,-111.2374,-71.313263)">
+        <title
+           id="title1066">C3H</title>
+        <polygon
+           fill="none"
+           stroke="#000000"
+           points="118.2469,-91.4354 64.2469,-91.4354 64.2469,-55.4354 118.2469,-55.4354 "
+           id="polygon1068" />
+        <text
+           text-anchor="middle"
+           x="91.246902"
+           y="-69.235397"
+           font-family="Times,serif"
+           font-size="14px"
+           fill="#000000"
+           id="text1070"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif" />
+      </g>
+      <text
+         text-anchor="middle"
+         x="77.790062"
+         y="-119.13451"
+         font-family="Times,serif"
+         font-size="10px"
+         fill="#000000"
+         id="text1081"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#b3b3b3;fill-opacity:1;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">0.21</text>
+      <g
+         id="edge7-9"
+         class="edge"
+         transform="matrix(1.074457,0,0,0.76868254,34.171174,-43.027523)">
+        <title
+           id="title1084">logSLA-&gt;Fireline_intensity_kWm_1</title>
+        <path
+           fill="none"
+           stroke="#000000"
+           stroke-width="2"
+           d="m 121.5506,-184.9503 c 14.89,0.4055 33.0876,1.1495 49.3625,2.5149 85.5735,7.1789 106.9908,10.2724 191.5926,25 2.6324,0.4582 5.302,0.9388 7.9944,1.4373"
+           id="path1086" />
+        <polygon
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="2"
+           points="369.844,-152.5602 371.1567,-159.436 380.323,-154.1227 "
+           id="polygon1088"
+           transform="translate(-5.7968076,-1.0476802)" />
+      </g>
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-width="1.98803"
+         d="m 142.31565,-224.52796 c 26.23559,25.38172 64.83072,41.75822 81.22865,54.2769"
+         id="path1109"
+         sodipodi:nodetypes="cc" />
+      <polygon
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         points="212.3857,-162.8204 219.0498,-154.5839 208.7038,-156.8669 "
+         id="polygon1111"
+         transform="matrix(1.2047506,0.26798802,-0.44813175,0.72045493,-102.11913,-111.90633)" />
+      <text
+         text-anchor="middle"
+         x="152.26845"
+         y="-257.44299"
+         font-family="Times,serif"
+         font-size="14px"
+         fill="#000000"
+         id="text1113"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">0.81*</text>
+      <path
+         fill="none"
+         stroke="#c0c0c0"
+         d="m 23.073056,-178.30763 c -28.21597,21.80043 -43.18172,34.24181 -44.283477,52.18948 0.58729,17.11304 32.011385,45.222527 46.998254,47.466317"
+         id="path1118"
+         sodipodi:nodetypes="ccc"
+         style="stroke-width:0.749949" />
+      <polygon
+         fill="#c0c0c0"
+         stroke="#c0c0c0"
+         points="78.2583,-241.2225 75.7178,-230.9367 69.8581,-234.766 "
+         id="polygon1120"
+         transform="matrix(1.2853972,0,0,0.76868254,-72.409471,1.9768168)" />
+      <polygon
+         fill="#c0c0c0"
+         stroke="#c0c0c0"
+         points="53.5636,-82.357 56.466,-88.727 64.1147,-81.3957 "
+         id="polygon1122"
+         transform="matrix(1.2853972,0,0,0.76868254,-47.803401,-13.834813)" />
+      <text
+         text-anchor="middle"
+         x="-28.67058"
+         y="-92.554611"
+         font-family="Times,serif"
+         font-size="10px"
+         fill="#000000"
+         id="text1124"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#b3b3b3;fill-opacity:1;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">-0.06</text>
+      <path
+         fill="none"
+         stroke="#000000"
+         stroke-width="1.71405"
+         d="m 154.72683,-120.87414 c 25.90938,-5.0084 18.90897,-3.88714 50.96422,-10.08362"
+         id="path1138"
+         sodipodi:nodetypes="cc" />
+      <polygon
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         points="197.2259,-111.4772 194.6572,-117.989 205.244,-118.4026 "
+         id="polygon1140"
+         transform="matrix(1.2853972,0,0,0.76868254,-46.054261,-43.027523)" />
+      <text
+         text-anchor="middle"
+         x="133.3476"
+         y="-165.94533"
+         font-family="Times,serif"
+         font-size="14px"
+         fill="#000000"
+         id="text1142"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">0.31*</text>
+      <text
+         xml:space="preserve"
+         id="text1744"
+         style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1746);"
+         transform="matrix(1.2853972,0,0,0.76868254,-47.579111,-43.075793)"><tspan
+           x="70.341797"
+           y="-258.94848"><tspan
+             style="shape-inside:url(#rect1746)">Leaf size (cm)</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         id="text1750"
+         style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1752);"
+         transform="matrix(1.2853972,0,0,0.76868254,-45.096971,-64.903923)"><tspan
+           x="71.824219"
+           y="-79.300038"><tspan
+             style="shape-inside:url(#rect1752)">Leaf curl 
+</tspan></tspan><tspan
+           x="71.824219"
+           y="-64.276913"><tspan
+             style="shape-inside:url(#rect1752)">(unitless)</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:144.232;stroke-width:0.751158"
+         x="188.50336"
+         y="-134.75269"
+         id="text1774"
+         transform="matrix(1.2853972,0,0,0.76868254,-2.250754,-46.159533)"><tspan
+           x="188.50336"
+           y="-134.75269"><tspan
+             style="font-size:12.0185px;stroke-width:0.751158">Litter specific 
+</tspan></tspan><tspan
+           x="188.50336"
+           y="-119.72956"><tspan
+             style="font-size:12.0185px;stroke-width:0.751158">volume (m</tspan><tspan
+             style="font-size:65%;baseline-shift:super">3</tspan><tspan
+             style="font-size:12.0185px;stroke-width:0.751158"> kg</tspan><tspan
+             style="font-size:65%;baseline-shift:super">-1</tspan><tspan
+             style="font-size:12.0185px;stroke-width:0.751158">)</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         x="394.08139"
+         y="-141.04967"
+         id="text1778"
+         style="font-size:12.0185px;white-space:pre;inline-size:156.274"
+         transform="matrix(1.2853972,0,0,0.76868254,-47.482641,-41.888613)"><tspan
+           x="394.08139"
+           y="-141.04967"><tspan
+             style="font-size:12.0185px;baseline-shift:baseline;stroke-width:0.751158">Fireline intensity
+</tspan></tspan><tspan
+           x="394.08139"
+           y="-126.02654"><tspan
+             style="font-size:12.0185px;baseline-shift:baseline;stroke-width:0.751158"> (kW m </tspan><tspan
+             style="font-size:65%;baseline-shift:super">-1</tspan><tspan
+             style="font-size:12.0185px;baseline-shift:baseline;stroke-width:0.751158">)</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         id="text1791"
+         style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1793);"
+         transform="matrix(1.1552535,0,0,0.76868254,-30.740101,-46.217033)"><tspan
+           x="65.15625"
+           y="-183.01488"><tspan
+             style="shape-inside:url(#rect1793)">Specific leaf
+</tspan></tspan><tspan
+           x="65.15625"
+           y="-167.99175"><tspan
+             style="shape-inside:url(#rect1793)">area (cm</tspan><tspan
+             style="font-size:65%;baseline-shift:super">2</tspan><tspan
+             style="shape-inside:url(#rect1793)"> g</tspan><tspan
+             style="font-size:65%;baseline-shift:super">-1</tspan><tspan
+             style="shape-inside:url(#rect1793)">)</tspan></tspan></text>
+      <text
+         text-anchor="middle"
+         x="242.15623"
+         y="-234.19597"
+         font-family="Times,serif"
+         font-size="14px"
+         fill="#000000"
+         id="text1113-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">0.17*</text>
+      <g
+         id="node5-0-2"
+         class="node"
+         transform="matrix(2.2144307,0,0,0.70722682,-107.66085,-11.736703)">
+        <title
+           id="title1066-0">C3H</title>
+        <polygon
+           fill="none"
+           stroke="#000000"
+           points="118.2469,-91.4354 64.2469,-91.4354 64.2469,-55.4354 118.2469,-55.4354 "
+           id="polygon1068-0" />
+        <text
+           text-anchor="middle"
+           x="91.246902"
+           y="-69.235397"
+           font-family="Times,serif"
+           font-size="14px"
+           fill="#000000"
+           id="text1070-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif" />
+      </g>
+      <text
+         xml:space="preserve"
+         id="text1744-3"
+         style="font-size:12.0185px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1746-1);"
+         transform="matrix(1.2853972,0,0,0.76868254,-38.963151,136.94875)"><tspan
+           x="70.341797"
+           y="-258.94848"><tspan>[Al] (µg g</tspan><tspan
+             style="font-size:65%;baseline-shift:super">-1</tspan><tspan>)</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.9666px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.746661"
+         transform="scale(1.2931389,0.77331214)"
+         x="35.573654"
+         y="-394.00995"
+         id="text3790"><tspan
+           sodipodi:role="line"
+           x="0"
+           y="0"
+           id="tspan3788"
+           style="stroke-width:0.746661"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.9666px;font-family:'Times New Roman';fill:#000000;stroke-width:0.746661"
+             id="tspan3786" /></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:6.90661px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.746661"
+         transform="scale(1.2931389,0.77331214)"
+         x="55.625355"
+         y="-398.54547"
+         id="text3798"><tspan
+           sodipodi:role="line"
+           x="55.625355"
+           y="-398.54547"
+           id="tspan3796"
+           style="stroke-width:0.746661" /></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.9666px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.746661"
+         transform="scale(1.2931389,0.77331214)"
+         x="117.94969"
+         y="-72.002312"
+         id="text3804"><tspan
+           sodipodi:role="line"
+           x="117.94969"
+           y="-72.002312"
+           id="tspan3802"
+           style="stroke-width:0.746661"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.9666px;font-family:'Times New Roman';fill:#000000;stroke-width:0.746661"
+             id="tspan3800"> </tspan></tspan></text>
+      <g
+         clip-path="url(#clipEmfPath1)"
+         id="g3812"
+         transform="matrix(0.96553629,0,0,0.57740197,46.001673,-312.6304)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:400;font-size:14.6875px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+           transform="translate(-31.331026,13.747287)"
+           x="0"
+           y="0"
+           id="text3810"><tspan
+             sodipodi:role="line"
+             x="0"
+             y="0"
+             id="tspan3808"><tspan
+               dx="0"
+               dy="0"
+               style="font-style:normal;font-variant:normal;font-weight:400;font-size:14.6875px;font-family:'Times New Roman';fill:#000000"
+               id="tspan3806">1</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.9666px;line-height:125%;font-family:'Times New Roman';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.746661"
+         transform="scale(1.2931389,0.77331214)"
+         x="74.265625"
+         y="-72.002312"
+         id="text3818"><tspan
+           sodipodi:role="line"
+           x="74.265625"
+           y="-72.002312"
+           id="tspan3816"
+           style="stroke-width:0.746661"><tspan
+             dx="0"
+             dy="0"
+             style="font-style:normal;font-variant:normal;font-weight:400;font-size:10.9666px;font-family:'Times New Roman';fill:#000000;stroke-width:0.746661"
+             id="tspan3814"> </tspan></tspan></text>
+      <path
+         style="fill:none;stroke:#c0c0c0;stroke-width:1.26932;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 26.26081,-240.24463 c -144.86401,156.537907 -4.462459,182.394057 0,175.817857"
+         id="path3877"
+         sodipodi:nodetypes="cc" />
+      <polygon
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         points="197.2259,-111.4772 194.6572,-117.989 205.244,-118.4026 "
+         id="polygon1140-8"
+         transform="matrix(1.1752655,0.31130916,-0.52057372,0.70282249,-274.25778,-44.490623)"
+         inkscape:transform-center-x="2.198105"
+         inkscape:transform-center-y="-0.65283369"
+         style="fill:#c0c0c0;fill-opacity:1;stroke:#c0c0c0;stroke-opacity:1" />
+      <polygon
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         points="205.244,-118.4026 197.2259,-111.4772 194.6572,-117.989 "
+         id="polygon1140-8-1"
+         transform="matrix(1.1712681,-0.31665102,0.52950645,0.70043201,-147.65953,-93.170363)"
+         inkscape:transform-center-x="3.0052795"
+         inkscape:transform-center-y="2.5063772"
+         style="fill:#c0c0c0;fill-opacity:1;stroke:#c0c0c0;stroke-opacity:1" />
+      <text
+         text-anchor="middle"
+         x="1.1771939"
+         y="-168.11293"
+         font-family="Times,serif"
+         font-size="10px"
+         fill="#000000"
+         id="text1124-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#b3b3b3;fill-opacity:1;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">0.20</text>
+      <text
+         text-anchor="middle"
+         x="262.90326"
+         y="-105.60551"
+         font-family="Times,serif"
+         font-size="14px"
+         fill="#000000"
+         id="text1142-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.95545px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#ff0000;fill-opacity:1;stroke-width:0.994015"
+         transform="scale(1.2931389,0.77331214)">-0.14*</text>
+      <polygon
+         fill="#c0c0c0"
+         stroke="#c0c0c0"
+         points="53.6236,-87.4825 57.0857,-93.5664 64.046,-85.5786 "
+         id="polygon1079-4"
+         transform="matrix(0.6610598,0.65923726,-1.1023819,0.39532149,-55.333781,-88.412443)" />
+      <polygon
+         fill="#c0c0c0"
+         stroke="#c0c0c0"
+         points="57.0857,-93.5664 64.046,-85.5786 53.6236,-87.4825 "
+         id="polygon1079-4-4"
+         transform="matrix(-0.66492152,-0.65784692,1.1000569,-0.39763084,216.9592,-101.46347)" />
+      <path
+         style="fill:none;stroke:#c0c0c0;stroke-width:0.746661px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 80.045887,-103.2878 0.788638,17.544047"
+         id="path3971" />
+    </g>
+    <!-- C3H&#45;&gt;log_al -->
+    <!-- log_al&#45;&gt;log_litter_spec_vol -->
+    <!-- log_al&#45;&gt;Fireline_intensity_kWm_1 -->
+    <!-- Resid_Fireline_intensity_kWm_1 -->
+    <!-- Resid_Fireline_intensity_kWm_1&#45;&gt;Fireline_intensity_kWm_1 -->
+    <g
+       id="edge9-8"
+       class="edge"
+       transform="matrix(1.0860096,-0.17957784,0.16356725,1.2802442,49.090583,63.260288)">
+      <title
+         id="title2124-5">log_al-&gt;Fireline_intensity_kWm_1</title>
+      <path
+         fill="none"
+         stroke="#ff0000"
+         stroke-width="2"
+         d="m 116.6015,-57.0385 c 52.3438,-6.9803 169.6442,-22.6227 251.8472,-33.5847"
+         id="path2126-9" />
+      <polygon
+         fill="#ff0000"
+         stroke="#ff0000"
+         stroke-width="2"
+         points="369.0945,-87.1783 368.1691,-94.1169 378.5441,-91.9695 "
+         id="polygon2128-6" />
+      <text
+         text-anchor="middle"
+         x="249.29491"
+         y="-87.635399"
+         font-family="Times, serif"
+         font-size="14px"
+         fill="#ff0000"
+         id="text2130-0" />
+    </g>
+  </g>
+</svg>
