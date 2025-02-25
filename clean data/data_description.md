@@ -1,14 +1,17 @@
 This folder contains the following files:
 
 burn_level_data.csv -- this file contains analysis-ready data for each experimental burn, including both measurements of the burn and the leaves that made up the fuel bed. Each row is a burn-leve replicate (N = 262)
+
 burn_sp_level_data.csv -- this file contains the same data as burn_level_data.csv, but aggregated to the species level. Each row is the mean of all the replicates within each species (N = 88)
+
 leaf_level_data.csv -- this file contains the measurements made for each intensively measured leaf, including fresh and dry dimensions and 3D-scanned measurements. Each row represents an individual leaf (N = 548)
+
 leaf_sp_level_data.csv -- his file contains the same data as burn_level_data.csv, but aggregated to the species level. Each row is the mean of all the replicates within each species (N = 91)
 
 Column headings are defined below. Most of them are shared between the data tables, so are not explained separately for each table.
 
 Burn-related variables:
-    Species -- species code
+    *Species -- species code
     sample -- unique replicate code
     Date -- date of burn trial
     time -- time of ignition
