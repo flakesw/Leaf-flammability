@@ -11,52 +11,52 @@ leaf_sp_level_data.csv -- his file contains the same data as burn_level_data.csv
 Column headings are defined below. Most of them are shared between the data tables, so are not explained separately for each table.
 
 Burn-related variables:
-    *Species -- species code
-    sample -- unique replicate code
-    Date -- date of burn trial
-    time -- time of ignition
-    LitterDepth_n -- litter depth measurements at 15, 30, and 45 cm along arena (cm)
-    Average.Litter.Depth -- mean of litter depth measurements (cm)
-    FlameHeight_n -- flame height estimated at 15, 30, and 45 cm along arena (cm)
-    Average.Flame.Height -- mean of flame heights (cm)
-    Original.Mass -- original mass of fuel (150 g for all trials) (g)
-    FinalMass.g. -- unburned fuel mass after fire extinguished (g)
-    PercentCombustion -- proportion of fuel burned (unitless)
-    HeatFlux_SBG01_Max -- maximum value recorded from heat flux sensor (W m-2)
-    Heatflux_flat_Max -- maximum value recorded from heat flux sensor (W m-2)
-    Temp_C_n_m_Max -- maximum temperature recorded by thermocouple located n cm along the arena, at a height of m cm (deg. C)
-    Temp_C_IR_Max -- maximum temperature recorded by IR sensor (deg. C)
-    Fuel.load..kg.m2. -- fuel load (same for all trials) (kg m-2)
-    Mean.ROS.ms.1 -- mean rate of spread (m s-1)
-    Fireline.intensity.kWm.1 -- fireline intensity (kW m-1)
-    litter_spec_vol -- litter specific volume (cm3 g-1)
-    litter_bulk_density -- litter bulk density (g-1 cm3)
-    success -- did a fire successfully spread to the end of the arena (logical)
-    n_success -- number of successes
-    prop_success -- proportion of trials that were successful
+  *Species -- species code
+  *sample -- unique replicate code
+  *Date -- date of burn trial
+  *time -- time of ignition
+  *LitterDepth_n -- litter depth measurements at 15, 30, and 45 cm along arena (cm)
+  *Average.Litter.Depth -- mean of litter depth measurements (cm)
+  *FlameHeight_n -- flame height estimated at 15, 30, and 45 cm along arena (cm)
+  *Average.Flame.Height -- mean of flame heights (cm)
+  *Original.Mass -- original mass of fuel (150 g for all trials) (g)
+  *FinalMass.g. -- unburned fuel mass after fire extinguished (g)
+  *PercentCombustion -- proportion of fuel burned (unitless)
+  *HeatFlux_SBG01_Max -- maximum value recorded from heat flux sensor (W m-2)
+  *Heatflux_flat_Max -- maximum value recorded from heat flux sensor (W m-2)
+  *Temp_C_n_m_Max -- maximum temperature recorded by thermocouple located n cm along the arena, at a height of m cm (deg. C)
+  *Temp_C_IR_Max -- maximum temperature recorded by IR sensor (deg. C)
+  *Fuel.load..kg.m2. -- fuel load (same for all trials) (kg m-2)
+  *Mean.ROS.ms.1 -- mean rate of spread (m s-1)
+  *Fireline.intensity.kWm.1 -- fireline intensity (kW m-1)
+  *litter_spec_vol -- litter specific volume (cm3 g-1)
+  *litter_bulk_density -- litter bulk density (g-1 cm3)
+  *success -- did a fire successfully spread to the end of the arena (logical)
+  *n_success -- number of successes
+  *prop_success -- proportion of trials that were successful
 
 Leaf- and species-related variables
-    Al.Conc. -- foliar aluminum concentration (ppm)
-    accumulator -- logical, is Al.Conc. > 1000?
-    All_ash -- sum of foliar metal concentration (proportion)
-    FreshL -- length of fresh leaf (cm)
-    FreshW -- width of fresh leaf (cm)
-    FreshH -- height of fresh leaf measured from table to highest point (cm)
-    FreshTH -- leaf thickness (mm)
-    Petole -- petiole length (cm)
-    DryL -- length of dry leaf (cm)
-    DryW -- width of dry leaf (cm)
-    DryH -- height of dry leaf (cm)
-    DryTH -- thickness of dry leaf (mm)
-    DryWeight -- mass of dry leaf (g)
-    Areacm2 -- area of fresh leaf from flatbed scanner (cm2)
-    SLAcm2g.1 -- specific leaf area (cm2 g-1)
-    freshHull -- volume of the convex hull containing the fresh leaf (cm3)
-    dryHull -- volume of the convex hull containing the dry leaf (cm3)
-    particle_volume -- volume taken up by leaf tissue (leaf area times leaf thickness) (cm3)
-    hull_specific_vol -- specific volume of individual leaf (volume of convex hull per gram of leaf mass) (cm3 g-1)
-    prismatic_volume -- volume calculated as leaf area times leaf height (cm3)
-    rectangular_volume -- volume calculated as leaf length times width times height (cm3)
-    packing_ratio -- sum of the volume of fuel particles divided by litter bed volume (proportion)
-    FG -- functional type (forest/generalist/savanna)
+  *Al.Conc. -- foliar aluminum concentration (ppm)
+  *accumulator -- logical, is Al.Conc. > 1000?
+  *All_ash -- sum of foliar metal concentration (proportion)
+  *FreshL -- length of fresh leaf (cm)
+  *FreshW -- width of fresh leaf (cm)
+  *FreshH -- height of fresh leaf measured from table to highest point (cm)
+  *FreshTH -- leaf thickness (mm)
+  *Petole -- petiole length (cm)
+  *DryL -- length of dry leaf (cm)
+  *DryW -- width of dry leaf (cm)
+  *DryH -- height of dry leaf (cm)
+  *DryTH -- thickness of dry leaf (mm)
+  *DryWeight -- mass of dry leaf (g)
+  *Areacm2 -- area of fresh leaf from flatbed scanner (cm2)
+  *SLAcm2g.1 -- specific leaf area (cm2 g-1)
+  *freshHull -- volume of the convex hull containing the fresh leaf (cm3)
+  *dryHull -- volume of the convex hull containing the dry leaf (cm3)
+  *particle_volume -- volume taken up by leaf tissue (leaf area times leaf thickness) (cm3)
+  *hull_specific_vol -- specific volume of individual leaf (volume of convex hull per gram of leaf mass) (cm3 g-1)
+  *prismatic_volume -- volume calculated as leaf area times leaf height (cm3)
+  *rectangular_volume -- volume calculated as leaf length times width times height (cm3)
+  *packing_ratio -- sum of the volume of fuel particles divided by litter bed volume (proportion)
+  *FG -- functional type (forest/generalist/savanna)
 
